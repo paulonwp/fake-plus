@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Host: db
--- Generation Time: May 25, 2022 at 11:28 PM
--- Server version: 10.3.34-MariaDB-1:10.3.34+maria~focal-log
--- PHP Version: 8.0.19
+-- Host: 127.0.0.1
+-- Generation Time: May 28, 2022 at 12:50 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.0.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db`
+-- Database: `yootv2`
 --
 
 -- --------------------------------------------------------
@@ -220,6 +220,14 @@ CREATE TABLE `file_entries` (
   `owner_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `file_entries`
+--
+
+INSERT INTO `file_entries` (`id`, `name`, `file_name`, `file_size`, `mime`, `extension`, `user_id`, `created_at`, `updated_at`, `public`, `disk_prefix`, `parent_id`, `description`, `password`, `type`, `deleted_at`, `path`, `preview_token`, `thumbnail`, `owner_id`) VALUES
+(1, 'logo-light.png', 'ClL2p3QvUx50sOBi6qBPDx1gVmiLX94f72fAfbCS.png', 8533, 'image/png', 'png', NULL, '2022-05-27 21:50:18', '2022-05-27 21:50:18', 1, 'branding_media', NULL, NULL, NULL, 'image', NULL, NULL, NULL, 0, 1),
+(2, 'logo-dark.png', 'xoqnPiKGKV1LrR5FYYnEKLzo6JgB7muztz07v2ft.png', 8241, 'image/png', 'png', NULL, '2022-05-27 21:50:22', '2022-05-27 21:50:22', 1, 'branding_media', NULL, NULL, NULL, 'image', NULL, NULL, NULL, 0, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -236,6 +244,14 @@ CREATE TABLE `file_entry_models` (
   `owner` tinyint(1) NOT NULL DEFAULT 0,
   `permissions` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `file_entry_models`
+--
+
+INSERT INTO `file_entry_models` (`id`, `file_entry_id`, `model_id`, `model_type`, `created_at`, `updated_at`, `owner`, `permissions`) VALUES
+(1, 1, 1, 'App\\User', '2022-05-27 21:50:18', '2022-05-27 21:50:18', 1, NULL),
+(2, 2, 1, 'App\\User', '2022-05-27 21:50:22', '2022-05-27 21:50:22', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -675,8 +691,8 @@ INSERT INTO `settings` (`id`, `name`, `value`, `created_at`, `updated_at`, `priv
 (7, 'registration.disable', 'false', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
 (8, 'cache.report_minutes', '60', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
 (9, 'branding.favicon', 'client/favicon/icon-144x144.png', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
-(10, 'branding.logo_dark', 'client/assets/images/logo-dark.png', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
-(11, 'branding.logo_light', 'client/assets/images/logo-light.png', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
+(10, 'branding.logo_dark', 'storage/branding_media/xoqnPiKGKV1LrR5FYYnEKLzo6JgB7muztz07v2ft.png', '2022-05-23 14:36:47', '2022-05-27 21:50:38', 0),
+(11, 'branding.logo_light', 'storage/branding_media/ClL2p3QvUx50sOBi6qBPDx1gVmiLX94f72fAfbCS.png', '2022-05-23 14:36:47', '2022-05-27 21:50:38', 0),
 (12, 'i18n.default_localization', 'en', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
 (13, 'i18n.enable', 'true', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
 (14, 'logging.sentry_public', '', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
@@ -1268,13 +1284,13 @@ ALTER TABLE `custom_pages`
 -- AUTO_INCREMENT for table `file_entries`
 --
 ALTER TABLE `file_entries`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `file_entry_models`
 --
 ALTER TABLE `file_entry_models`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `invoices`
