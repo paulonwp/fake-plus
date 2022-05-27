@@ -1414,7 +1414,7 @@ ALTER TABLE `workspaces`
 
 --
 -- AUTO_INCREMENT for table `workspace_user`
---
+-- 
 ALTER TABLE `workspace_user`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
