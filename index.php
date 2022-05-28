@@ -50,8 +50,7 @@ if ( ! file_exists(__DIR__.'/.env') || ! (preg_match('/INSTALLED=(true|1)/', fil
         <img class="img-responsive" src="client/assets/images/logo-dark.png" alt="logo">
     </div>
     <div class="panel">
-        <h1>Could not find .htaccess file</h1>
-        <p>See the article <a href="https://support.vebto.com/help-center/articles/21/27/172/site-not-loading">here</a> for possible solutions.</p>
+        <h1>Could not find .htaccess file</h1>       
     </div>
 </body>
 </html>

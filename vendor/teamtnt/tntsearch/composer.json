@@ -13,12 +13,12 @@
         "stemming",
         "fuzzy search"
     ],
-    "homepage": "https://github.com/paulonwp/",
+    "homepage": "https://github.com/teamtnt/tntsearch",
     "license": "MIT",
     "authors": [{
-        "name": "Paul Olorunrantimi",
-        "email": "seopaulwebsite@gmail.com",
-        "homepage": "http://www.wpdesignfix.com",
+        "name": "Nenad Tičarić",
+        "email": "nticaric@gmail.com",
+        "homepage": "http://www.tntstudio.us",
         "role": "Developer"
     }],
     "require": {

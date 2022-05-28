@@ -82,11 +82,6 @@
 
         <p>You can close this page now and continue using the site.</p>
 
-        <div class="support-links-container">
-            <h4>Support and Questions</h4>
-            <div>If you encounter any issues after the update, please submit a ticket <a target="_blank" href="https://support.vebto.com">here</a>. Thanks!</div>
-        </div>
-
         <a href="/" class="button">Close Update Page</a>
     </div>
 </div>
