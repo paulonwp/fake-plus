@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 28, 2022 at 12:50 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.0.17
+-- Host: localhost:3306
+-- Generation Time: May 28, 2022 at 02:46 AM
+-- Server version: 10.3.31-MariaDB-cll-lve
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `yootv2`
+-- Database: `yourfami_demo`
 --
 
 -- --------------------------------------------------------
@@ -627,14 +628,6 @@ CREATE TABLE `projects` (
   `settings` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `projects`
---
-
-INSERT INTO `projects` (`id`, `name`, `published`, `created_at`, `updated_at`, `uuid`, `template`, `slug`, `settings`) VALUES
-(3, 'Why', 1, '2022-05-23 14:45:39', '2022-05-23 14:45:39', 'TmMu9NO4K2IXHTpUfNqqCAm1YoQloaxER6Sn', NULL, 'why', NULL),
-(4, 'Music Demo', 1, '2022-05-25 12:55:51', '2022-05-25 12:55:51', '6p6ib1cGVjdXuhSAEVyLeNBD7086U5qcrAlH', NULL, 'music-demo', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -718,7 +711,12 @@ INSERT INTO `settings` (`id`, `name`, `value`, `created_at`, `updated_at`, `priv
 (34, 'builder.googgle_fonts_api_key', 'AIzaSyDhc_8NKxXjtv69htFcUPe6A7oGSQ4om2o', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
 (35, 'builder.template_categories', '[\"Landing Page\",\"Blog\",\"Portfolio\"]', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
 (36, 'publish.allow_credential_change', 'true', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0),
-(37, 'homepage.appearance', '{\"headerTitle\":\"YOOTV Channel Builder\\u2019re Proud Of\",\"headerSubtitle\":\"Discover the platform that gives you the freedom to create, design, manage and develop your web presence exactly the way you want.\",\"headerImage\":\"client\\/assets\\/images\\/landing\\/landing-bg.svg\",\"headerImageOpacity\":1,\"headerOverlayColor1\":null,\"headerOverlayColor2\":null,\"footerTitle\":\"Build your website today\",\"footerSubtitle\":null,\"footerImage\":\"client\\/assets\\/images\\/landing\\/landing-bg.svg\",\"actions\":{\"cta1\":\"Start Now\",\"cta2\":\"Learn More\"},\"primaryFeatures\":[{\"title\":\"Custom domains\",\"subtitle\":\"Attach your own custom domain or use on of the free YOOTVsubdomains.\",\"image\":\"custom-domain.svg\"},{\"title\":\"Eye-catching website designs\",\"subtitle\":\"Our easy-to-use builder helps you create and launch a beautiful website\\\\u2014fast.\",\"image\":\"website-builder.svg\"},{\"title\":\"Grow your business with powerful tools\",\"subtitle\":\"Design and build your own high-quality websites. Whatever the type of site\\\\u2014you can do it with YOOTVwebsite builder.\",\"image\":\"pen-tool.svg\"}],\"secondaryFeatures\":[{\"title\":\"Look like an expert right from the start.\",\"subtitle\":\"AWARD-WINNING WEBSITE DESIGN\",\"image\":\"client\\/assets\\/images\\/landing\\/landing-feature-1.jpg\",\"description\":\"Our award-winning templates are the most beautiful way to present your ideas online. Stand out with a professional website, portfolio, or online store.\"},{\"title\":\"The Freedom to Create the Websites You Want\",\"subtitle\":\"Complete Freedom\",\"image\":\"client\\/assets\\/images\\/landing\\/landing-feature-2.jpg\",\"description\":\"Start from scratch or choose from large catalog of templates to make your own website. With the world\\\\u2019s most innovative drag and drop website builder, you can customize or change anything. With the YOOTV, you can create your own professional website that looks stunning.\"}]}', '2022-05-23 14:36:47', '2022-05-23 14:36:47', 0);
+(37, 'homepage.appearance', '{\"headerTitle\":\"YOOTV Channel Builder\",\"headerSubtitle\":\"It\\u2019s for preserving memories and sharing experiences. It\\u2019s about learning and growing and exploring what interests you most. And it\\u2019s about personal connection, with everyone doing their part to bring each other closer \\nand make each other better.\",\"headerImage\":\"client\\/assets\\/images\\/landing\\/landing-bg.svg\",\"headerImageOpacity\":1,\"headerOverlayColor1\":null,\"headerOverlayColor2\":null,\"footerTitle\":\"Build your website today\",\"footerSubtitle\":null,\"footerImage\":\"client\\/assets\\/images\\/landing\\/landing-bg.svg\",\"actions\":{\"inputText\":null,\"inputButton\":null,\"cta1\":\"Start Now\",\"cta2\":\"Learn More\"},\"primaryFeatures\":[{\"title\":\"Custom domains\",\"subtitle\":\"Attach your own custom domain or use on of the free YOOTVsubdomains.\",\"image\":\"custom-domain.svg\"},{\"title\":\"Eye-catching website designs\",\"subtitle\":\"Our easy-to-use builder helps you create and launch a beautiful website\\\\u2014fast.\",\"image\":\"website-builder.svg\"},{\"title\":\"Grow your business with powerful tools\",\"subtitle\":\"Design and build your own high-quality websites. Whatever the type of site\\\\u2014you can do it with YOOTVwebsite builder.\",\"image\":\"pen-tool.svg\"}],\"secondaryFeatures\":[{\"title\":\"Look like an expert right from the start.\",\"subtitle\":\"AWARD-WINNING WEBSITE DESIGN\",\"image\":\"client\\/assets\\/images\\/landing\\/landing-feature-1.jpg\",\"description\":\"Our award-winning templates are the most beautiful way to present your ideas online. Stand out with a professional website, portfolio, or online store.\"},{\"title\":\"The Freedom to Create the Websites You Want\",\"subtitle\":\"Complete Freedom\",\"image\":\"client\\/assets\\/images\\/landing\\/landing-feature-2.jpg\",\"description\":\"Start from scratch or choose from large catalog of templates to make your own website. With the world\\\\u2019s most innovative drag and drop website builder, you can customize or change anything. With the YOOTV, you can create your own professional website that looks stunning.\"}],\"channelIds\":[]}', '2022-05-23 14:36:47', '2022-05-28 14:47:35', 0),
+(38, 'seo.home.show.og:title', 'YOOTV- Channel Builder.', '2022-05-28 14:48:44', '2022-05-28 14:48:44', 0),
+(39, 'seo.home.show.og:description', 'It’s for preserving memories and sharing experiences. It’s about learning and growing and exploring what interests you most. And it’s about the personal connection, with everyone doing their part to bring each other closer and make each other better.', '2022-05-28 14:48:44', '2022-05-28 14:48:44', 0),
+(40, 'seo.home.show.keywords', 'Site Builder', '2022-05-28 14:48:44', '2022-05-28 14:48:44', 0),
+(41, 'seo.custom-page.show.og:title', '{{page.title}} - {{site_name}}', '2022-05-28 14:48:44', '2022-05-28 14:48:44', 0),
+(42, 'seo.custom-page.show.og:description', '{{page.body}}', '2022-05-28 14:48:44', '2022-05-28 14:48:44', 0);
 
 -- --------------------------------------------------------
 
@@ -852,14 +850,6 @@ CREATE TABLE `users_projects` (
   `user_id` int(10) UNSIGNED NOT NULL,
   `project_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `users_projects`
---
-
-INSERT INTO `users_projects` (`id`, `user_id`, `project_id`) VALUES
-(3, 1, 3),
-(4, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -1356,7 +1346,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `social_profiles`
@@ -1414,7 +1404,7 @@ ALTER TABLE `workspaces`
 
 --
 -- AUTO_INCREMENT for table `workspace_user`
--- 
+--
 ALTER TABLE `workspace_user`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
